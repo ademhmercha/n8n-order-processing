@@ -10,19 +10,33 @@
 
 ## Quick Start
 
+### Option 1: Docker (recommended)
+
 ```bash
-# Start n8n
+cp backend/.env.example backend/.env  # then edit with your values
+docker compose up -d
+```
+
+### Option 2: Manual
+
+```bash
+# Terminal 1 — n8n
 n8n start
-# → http://localhost:5678
+
+# Terminal 2 — Backend
+cd backend && node server.js
+
+# Terminal 3 — Frontend
+cd frontend && npm run dev
 ```
 
 ## Environment Variables
 
-Create `backend/.env`:
+Copy `backend/.env.example` to `backend/.env` and fill in your values:
 
 ```env
 DATABASE_URL=postgresql://postgres.YOUR_REF:YOUR_PASSWORD@aws-0-eu-west-1.pooler.supabase.com:6543/postgres
-JWT_SECRET=your_jwt_secret_here
+JWT_SECRET=change_this_to_a_random_secret
 N8N_WEBHOOK_URL=http://localhost:5678/webhook/order-processing
 PORT=3000
 ```
