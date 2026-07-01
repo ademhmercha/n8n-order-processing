@@ -225,9 +225,6 @@ This is the most common source of issues. Follow these steps carefully:
 1. **Click any Postgres node** in the workflow (e.g., "Check Product Stock")
 2. Under **Credential to connect with**, click **Create New** (or the + icon)
 
-   > **📸 Screenshot:** ![Postgres Credential Setup](screenshots/n8n-postgres-credential.svg)  
-   > *Enter your Supabase pooler credentials — Host, Port 6543, SSL set to Disable*
-
 3. Fill in the form:
 
 | Field | Value | Notes |
@@ -271,9 +268,6 @@ The workflow is a linear pipeline with one conditional branch. Here is every nod
 - **Receives:** `{ orderId, customerId, productId, quantity }`
 - **Test URL:** `http://localhost:5678/webhook-test/order-processing`
 - **Production URL:** `http://localhost:5678/webhook/order-processing`
-
-> **📸 Screenshot:** ![Webhook Node Config](screenshots/n8n-webhook-node.svg)  
-> *Webhook node — POST method, path `/order-processing`, with test and production URLs*
 
 > **Important:** The test URL (`/webhook-test/`) only works when you click **"Listen for test event"** and handles ONE request per click. For continuous use, publish the workflow and use the production URL.
 
@@ -603,9 +597,6 @@ return data;
    ```
    http://localhost:5678/webhook/order-processing
    ```
-
-> **📸 Screenshot:** ![Publish Workflow](screenshots/n8n-publish-button.svg)  
-> *Click Publish to activate — status changes from Inactive (red) to Published (green)*
 
 > **⚠️ Critical:** The Express backend uses the **production URL** (`/webhook/`), NOT the test URL (`/webhook-test/`). The workflow must be Published for the production URL to work. The test URL only responds when you click "Listen for test event" in the editor.
 
