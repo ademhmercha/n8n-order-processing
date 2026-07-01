@@ -16,13 +16,25 @@ n8n start
 # → http://localhost:5678
 ```
 
-Then set this in `backend/.env`:
+## Environment Variables
+
+Create `backend/.env`:
 
 ```env
+DATABASE_URL=postgresql://postgres.YOUR_REF:YOUR_PASSWORD@aws-0-eu-west-1.pooler.supabase.com:6543/postgres
+JWT_SECRET=your_jwt_secret_here
 N8N_WEBHOOK_URL=http://localhost:5678/webhook/order-processing
+PORT=3000
 ```
 
-(The Express backend runs on `:3000`, calls this webhook when an order is placed.)
+| Variable | Description |
+|----------|-------------|
+| `DATABASE_URL` | Supabase pooler connection string (port 6543) |
+| `JWT_SECRET` | Secret for signing JWT tokens — generate with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` |
+| `N8N_WEBHOOK_URL` | n8n production webhook URL — must use `/webhook/` not `/webhook-test/` |
+| `PORT` | Express server port (default 3000) |
+
+(The Express backend runs on `:3000`, calls the n8n webhook when an order is placed.)
 
 ## n8n Workflow Setup
 
