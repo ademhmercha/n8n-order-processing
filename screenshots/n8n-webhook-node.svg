@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 460" font-family="'Inter', -apple-system, sans-serif">
+  <rect width="520" height="460" fill="#1a1a2e" rx="8"/>
+  <rect x="0" y="0" width="520" height="44" fill="#16162a" rx="8"/>
+  <rect x="0" y="36" width="520" height="8" fill="#16162a"/>
+  <circle cx="20" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="22" r="6" fill="#27c93f"/>
+  <text x="260" y="28" text-anchor="middle" fill="#888" font-size="13" font-weight="500">n8n — Webhook Node Configuration</text>
+
+  <rect x="30" y="60" width="460" height="380" rx="10" fill="#252547" stroke="#3d3d6b" stroke-width="1"/>
+
+  <text x="260" y="88" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Webhook</text>
+  <text x="260" y="104" text-anchor="middle" fill="#8b5cf6" font-size="11" font-weight="600">Trigger Node</text>
+
+  <line x1="50" y1="118" x2="470" y2="118" stroke="#3d3d6b" stroke-width="1"/>
+
+  <!-- HTTP Method -->
+  <text x="50" y="145" fill="#ccc" font-size="13" font-weight="500">HTTP Method</text>
+  <rect x="50" y="152" width="420" height="36" rx="6" fill="#1e1e3a" stroke="#4f46e5" stroke-width="2"/>
+  <text x="65" y="175" fill="#fff" font-size="13" font-weight="600">POST</text>
+
+  <!-- Path -->
+  <text x="50" y="210" fill="#ccc" font-size="13" font-weight="500">Path</text>
+  <rect x="50" y="217" width="420" height="36" rx="6" fill="#1e1e3a" stroke="#4f46e5" stroke-width="2"/>
+  <text x="65" y="240" fill="#fff" font-size="13">order-processing</text>
+
+  <!-- Respond mode -->
+  <text x="50" y="275" fill="#ccc" font-size="13" font-weight="500">Respond</text>
+  <rect x="50" y="282" width="420" height="36" rx="6" fill="#1e1e3a" stroke="#4f46e5" stroke-width="2"/>
+  <text x="65" y="305" fill="#fff" font-size="13">Using 'Respond to Webhook' Node</text>
+
+  <!-- URLs section -->
+  <line x1="50" y1="330" x2="470" y2="330" stroke="#3d3d6b" stroke-width="1"/>
+  <text x="50" y="350" fill="#f59e0b" font-size="11" font-weight="600">TEST URL (inactive until listening)</text>
+
+  <rect x="50" y="358" width="420" height="30" rx="6" fill="#1e1e3a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="65" y="378" fill="#f59e0b" font-size="11">http://localhost:5678/webhook-test/order-processing</text>
+
+  <text x="50" y="408" fill="#22c55e" font-size="11" font-weight="600">PRODUCTION URL (active when published)</text>
+
+  <rect x="50" y="416" width="420" height="30" rx="6" fill="#1e1e3a" stroke="#22c55e" stroke-width="1"/>
+  <text x="65" y="436" fill="#22c55e" font-size="11">http://localhost:5678/webhook/order-processing</text>
+</svg>
