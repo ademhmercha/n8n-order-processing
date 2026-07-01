@@ -58,8 +58,9 @@ This workflow is the brain of the system — it handles all order processing log
 
 1. Open `http://localhost:5678` in your browser
 2. Click **Workflows** → **Import from File**
-3. Select `n8n/order-processing-workflow.json`
-4. The workflow appears with 11 connected nodes
+3. Select `n8n/order-processing-workflow.json` from this project
+4. The workflow appears with all 11 nodes connected
+5. **Postgres nodes will show red warning triangles** — configure credentials next
 
 ![n8n Workflow Editor](screenshots/n8n%20workflow%20editor.png)
 
